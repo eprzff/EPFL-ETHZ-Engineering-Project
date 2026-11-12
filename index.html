@@ -131,65 +131,41 @@ h2 {
     flex-direction: column;
 }
 
+/* PROJECT IMAGES */
+
 .visual {
     height: 180px;
+    position: relative;
+    overflow: hidden;
     display: grid;
     place-items: center;
     color: white;
     font-size: 52px;
     font-weight: 700;
-    letter-spacing: -2px;
-    position: relative;
-    overflow: hidden;
 }
 
-.visual:after {
-    content: "";
+.visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     position: absolute;
     inset: 0;
-    background: repeating-radial-gradient(
-        circle at 80% 15%,
-        transparent 0 18px,
-        rgba(255,255,255,.11) 19px 20px,
-        transparent 21px 34px
-    );
+    z-index: 2;
 }
 
 .visual span {
+    position: relative;
     z-index: 1;
 }
 
-.c1 {
-    background: linear-gradient(130deg,#0a2644,#1a7d99);
-}
-
-.c2 {
-    background: linear-gradient(135deg,#34314f,#8a70a7);
-}
-
-.c3 {
-    background: linear-gradient(130deg,#1b4650,#54a4a5);
-}
-
-.c4 {
-    background: linear-gradient(130deg,#34445f,#778fac);
-}
-
-.c5 {
-    background: linear-gradient(130deg,#2d415d,#6387c0);
-}
-
-.c6 {
-    background: linear-gradient(130deg,#334b43,#8aab83);
-}
-
-.c7 {
-    background: linear-gradient(130deg,#533c4b,#ad8294);
-}
-
-.c8 {
-    background: linear-gradient(130deg,#243b53,#547b96);
-}
+.c1 { background: linear-gradient(130deg,#0a2644,#1a7d99); }
+.c2 { background: linear-gradient(135deg,#34314f,#8a70a7); }
+.c3 { background: linear-gradient(130deg,#1b4650,#54a4a5); }
+.c4 { background: linear-gradient(130deg,#34445f,#778fac); }
+.c5 { background: linear-gradient(130deg,#2d415d,#6387c0); }
+.c6 { background: linear-gradient(130deg,#334b43,#8aab83); }
+.c7 { background: linear-gradient(130deg,#533c4b,#ad8294); }
+.c8 { background: linear-gradient(130deg,#243b53,#547b96); }
 
 .content {
     padding: 18px;
@@ -292,42 +268,40 @@ footer {
 <body>
 
 <header>
-    <div class="wrap top">
+<div class="wrap top">
 
-        <div class="identity">
+    <div class="identity">
 
-            <div class="avatar">EP</div>
+        <div class="avatar">EP</div>
 
-            <div>
-                <h1>Eric Pizem</h1>
+        <div>
+            <h1>Eric Pizem</h1>
 
-                <p class="sub">
-                    MSc Mechanical Engineering — ETH Zürich · BSc — EPFL
-                </p>
+            <p class="sub">
+                MSc Mechanical Engineering — ETH Zürich · BSc — EPFL
+            </p>
 
-                <p class="tagline">
-                    Fluid mechanics · Numerical simulation · Mechanical design · Experimental engineering
-                </p>
-            </div>
-
+            <p class="tagline">
+                Fluid mechanics · Numerical simulation · Mechanical design · Experimental engineering
+            </p>
         </div>
 
-        <nav class="links">
-
-            <a href="https://www.linkedin.com/in/eric-pizem-754034409/"
-               target="_blank"
-               rel="noopener">
-                LinkedIn
-            </a>
-
-            <a href="reports/CV.pdf"
-               target="_blank">
-                CV (PDF)
-            </a>
-
-        </nav>
-
     </div>
+
+    <nav class="links">
+
+        <a href="https://www.linkedin.com/in/eric-pizem-754034409/"
+           target="_blank" rel="noopener">
+            LinkedIn
+        </a>
+
+        <a href="reports/CV.pdf" target="_blank">
+            CV (PDF)
+        </a>
+
+    </nav>
+
+</div>
 </header>
 
 
@@ -340,7 +314,6 @@ footer {
     Open a report to explore the work in detail.
 </p>
 
-
 <section class="grid" id="projects">
 
 
@@ -350,6 +323,8 @@ footer {
 
     <div class="visual c1">
         <span>CFD</span>
+        <img src="images/image1.png" alt="Multiphase flow simulation"
+             onerror="this.style.display='none'">
     </div>
 
     <div class="content">
@@ -386,6 +361,8 @@ footer {
 
     <div class="visual c2">
         <span>PTV</span>
+        <img src="images/image2.png" alt="Particle Tracking Velocimetry"
+             onerror="this.style.display='none'">
     </div>
 
     <div class="content">
@@ -421,6 +398,8 @@ footer {
 
     <div class="visual c3">
         <span>PIV</span>
+        <img src="images/image3.png" alt="PIV experiment"
+             onerror="this.style.display='none'">
     </div>
 
     <div class="content">
@@ -458,6 +437,8 @@ footer {
 
     <div class="visual c4">
         <span>FEM</span>
+        <img src="images/image4.png" alt="Structural optimization"
+             onerror="this.style.display='none'">
     </div>
 
     <div class="content">
@@ -510,6 +491,8 @@ footer {
 
     <div class="visual c5">
         <span>FEA</span>
+        <img src="images/image5.png" alt="Finite element analysis"
+             onerror="this.style.display='none'">
     </div>
 
     <div class="content">
@@ -547,6 +530,8 @@ footer {
 
     <div class="visual c7">
         <span>CAD</span>
+        <img src="images/image6.png" alt="Elastic-powered vehicle"
+             onerror="this.style.display='none'">
     </div>
 
     <div class="content">
@@ -585,6 +570,8 @@ footer {
 
     <div class="visual c8">
         <span>OPS</span>
+        <img src="images/image7.png" alt="Global operations strategy"
+             onerror="this.style.display='none'">
     </div>
 
     <div class="content">
@@ -624,6 +611,8 @@ footer {
 
     <div class="visual c6">
         <span>CAD</span>
+        <img src="images/image8.png" alt="Automatic Raspberry Gripper"
+             onerror="this.style.display='none'">
     </div>
 
     <div class="content">
@@ -646,7 +635,7 @@ footer {
         </div>
 
         <a class="report"
-           href="reports/Rasberry%20project.pdf"
+           href="reports/Rasberry%20projeect.pdf"
            target="_blank">
             View report ↗
         </a>
@@ -657,9 +646,7 @@ footer {
 
 
 </section>
-
 </main>
-
 
 <footer>
     © 2026 Eric Pizem · Engineering Portfolio
